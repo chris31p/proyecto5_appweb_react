@@ -9,13 +9,14 @@ function CharacterList({ category }) {
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const charactersPerPage = 8;
+  const charactersPerPage = 10;
 
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
         const response = await fetch('https://hp-api.herokuapp.com/api/characters');
         const data = await response.json();
+        console.log(data[0]);
         setCharacters(data);
       } catch (error) {
         console.error('Error fetching characters:', error);
@@ -72,14 +73,14 @@ function CharacterList({ category }) {
           color="primary"
           sx={{
             '& .MuiPaginationItem-root': {
-              color: '#FFFFFF', // Cambia el color del texto de los números
-              backgroundColor: 'rgba(0, 0, 0, 0.5)', // Fondo semitransparente
+              color: '#FFFFFF', //cambia el color del texto de los números
+              backgroundColor: 'rgba(0, 0, 0, 0.5)', // fondo semitransparente
               '&:hover': {
-                backgroundColor: 'rgba(255, 255, 255, 0.3)', // Fondo al pasar el mouse
+                backgroundColor: 'rgba(255, 255, 255, 0.3)', // color de fondo al pasar el mouse
               },
               '&.Mui-selected': {
-                backgroundColor: '#2196F3', // Fondo para el número seleccionado
-                color: '#FFFFFF', // Color del texto para el número seleccionado
+                backgroundColor: '#2196F3',
+                color: '#FFFFFF',
               },
             },
           }}
