@@ -28,7 +28,7 @@ function About() {
       </Box>
       <Typography variant="h6" sx={{ mb: 4, lineHeight: 1.8 }}>
         Esta aplicación interactiva te permite explorar el universo de Harry Potter con información detallada sobre los personajes. <br />
-        Fue desarrollada con <strong>React</strong> y <strong>MUI Material</strong>, utilizando datos de la API pública de Harry Potter.
+        Fue desarrollada con <strong>React + Vite</strong> y <strong>MUI Material</strong>, utilizando datos de la API pública de Harry Potter.
       </Typography>
       <Box sx={{ textAlign: "left", width: "100%", maxWidth: "600px", marginBottom: "24px" }}>
         <Typography variant="h5" gutterBottom>
@@ -46,6 +46,9 @@ function About() {
       </Box>
       <Typography variant="body2" sx={{ fontStyle: "italic" }}>
         ¡Sumérgete en el mundo mágico y descubre más!
+      </Typography>
+      <Typography variant="body2" sx={{ fontStyle: "italic" }}>
+        Desarrollado por: Christopher Pesántez - UDD C-16
       </Typography>
     </Container>
   );
