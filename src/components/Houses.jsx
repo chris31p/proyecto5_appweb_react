@@ -1,5 +1,4 @@
 import {
-    Container,
     Card,
     CardContent,
     Typography,
@@ -35,9 +34,8 @@ import {
   ];
   
   const Houses = () => (
-    <Container align="center">
-      <Typography variant="h4" gutterBottom 
-      sx={{ display: "flex", justifyContent: "center", marginBottom: 2 }}>
+    <Box sx={{ padding: '24px' }}>
+      <Typography variant="h4" align="center" gutterBottom >
         CASAS DE HOGWARTS 
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center", marginBottom: 2}}>
@@ -53,7 +51,7 @@ import {
         brujas y magos. 
       </Typography>
       <br />
-      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
         {houses.map((house) => (
           <Card key={house.name} sx={{ maxWidth: 275 }}>
             <CardMedia
@@ -73,7 +71,7 @@ import {
           </Card>
         ))}
       </Box>
-    </Container>
+    </Box>
   );
   
   export default Houses;

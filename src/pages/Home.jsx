@@ -10,10 +10,10 @@ function Home() {
       <Typography variant='h3' gutterBottom>Bienvenido al Mundo de Harry Potter</Typography>
       <br />
       <br />
-      <Typography variant='body1'>La felicidad se puede hallar hasta en los más oscuros momentos, si somos capaces de usar bien la luz.</Typography>
+      <Typography variant="h6" sx={{ lineHeight: 1 }}>La felicidad se puede hallar hasta en los más oscuros momentos, si somos capaces de usar bien la luz.</Typography>
       <br />
       <br />
-      <Typography variant='body1'>Explora personajes, casas y mucho más del mundo mágico.</Typography>
+      <Typography variant="h6" sx={{ fontStyle: "italic" }}>Explora personajes, casas y mucho más del mundo mágico.</Typography>
     </Container>
   );
 }
